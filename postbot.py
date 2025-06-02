@@ -30,12 +30,10 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     user_drafts[user_id]['text'] = update.message.text
     await update.message.reply_text(
-        f"📄 Черновик обновлён. Вот как будет выглядеть пост:
-
-{update.message.text}",
-        reply_markup=get_preview_markup()
-    )
-
+    f"📄 Черновик обновлён. Вот как будет выглядеть пост:\n\n{update.message.text}",
+    reply_markup=get_preview_markup()
+)
+    
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     photo_file_id = update.message.photo[-1].file_id  # берём наибольшее качество
