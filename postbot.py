@@ -11,7 +11,7 @@ from telegram.ext import (
 # Простая структура хранения поста (в памяти)
 user_drafts = {}
 
-CHANNEL_ID = "@your_channel_username"  # или "-1001234567890"
+CHANNEL_ID = "@adpanx"  # или "-1001234567890"
 
 def get_preview_markup():
     return InlineKeyboardMarkup([
