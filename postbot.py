@@ -46,9 +46,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_photo(
         photo=photo_file_id,
-        caption=f"📸 Предпросмотр поста:
-
-{user_drafts[user_id]['caption']}",
+        caption=f"📸 Предпросмотр поста:\n\n{user_drafts[user_id]['caption']}",
         reply_markup=get_preview_markup()
     )
 
